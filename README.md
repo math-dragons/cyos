@@ -4,7 +4,7 @@ The name of the project:
 Math Dragons
 
 Names of the team members:
-Aaron Smith, Andy Fennell, Neill and Luke Reynolds
+Aaron Smith, Andy Fennell, Neill Edwards and Luke Reynolds
 
 A description of the project:
 
