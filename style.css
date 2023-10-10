@@ -85,3 +85,142 @@ footer p {
   text-align: center;
   margin: 0 auto;
 }
+
+#about-dragons {
+  text-align: center;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  margin: 100px auto;
+  width: 80%;
+}
+
+#about-dragons p {
+  padding: 1.5rem;
+}
+
+h2 {
+  padding: 2rem;
+}
+
+#about-grid {
+  display: grid;
+  grid-template-columns: 4fr 1fr 4fr;
+  grid-template-rows: 30rem 5rem 30rem;
+  width: 80%;
+  margin: 12rem auto;
+}
+
+h3 {
+  text-align: center;
+  padding: 2rem;
+}
+
+#about-grid p {
+  padding: 1.5rem;
+}
+
+#about-aaron {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  grid-row: 1/2;
+  grid-column: 1/2;
+}
+
+#about-andy {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  grid-row: 1/2;
+  grid-column: 3/4;
+}
+
+#about-luke {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  grid-row: 3/4;
+  grid-column: 1/2;
+}
+
+#about-neill {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  grid-row: 3/4;
+  grid-column: 3/4;
+}
+
+#about-aaron img {
+  max-width: 400px;
+  position: relative;
+  left: 22rem;
+  bottom: 30rem;
+  cursor: pointer;
+}
+
+#about-aaron img:hover {
+  animation: spin-x 2s infinite;
+}
+
+@keyframes spin-x {
+  100% {
+    transform: rotatex(360deg);
+  }
+}
+
+#about-andy img {
+  max-width: 400px;
+  position: relative;
+  left: 22rem;
+  bottom: 38rem;
+  cursor: pointer;
+}
+
+#about-andy img:hover {
+  animation: spin 2s infinite;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#about-luke img {
+  max-width: 200px;
+  position: relative;
+  bottom: 28rem;
+  cursor: pointer;
+}
+
+#about-luke img:hover {
+  animation: spin-y 2s infinite;
+}
+
+@keyframes spin-y {
+  100% {
+    transform: rotatey(360deg);
+  }
+}
+
+#about-neill img {
+  max-width: 400px;
+  position: relative;
+  bottom: 31rem;
+  right: 6rem;
+  cursor: pointer;
+}
+
+#about-neill img:hover {
+  animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-50px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
