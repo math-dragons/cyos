@@ -3,19 +3,37 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
     <script src="app.js" defer></script>
     <title>Document</title>
   </head>
   <body>
-    <div>
-      <div id="text">Text</div>
-      <div id="option-buttons">
-        <button class="btn">Option 1</button>
-        <button class="btn">Option 2</button>
-        <button class="btn">Option 3</button>
-        <button class="btn">Option 4</button>
-      </div>
-    </div>
-    <div><img id="image" /></div>
+    <div class="header">
+      <nav>
+	  <img src="./images/logojoined.png" 
+        width="500"
+        height="180"
+        alt="Math Dragons Logo" class="overlay-image"
+        />
+		  <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Game</a></li>
+        <li><a href="#">Leaderboard</a></li>
+        <li><a href="#">About Us</a></li>
+		</ul>
+      </nav>
+        </div>
+    </header>
+    <div id="landing">
+      <h1>Welcome to Math Dragons!</h1>
+      <label for="playerName">Enter your name:</label>
+      <input type="text" id="playerName">
+      <button id="startButton">Start</button>
+  </div>
+  <div id="gameContainer">
+  </div>
+  <footer>
+    <p>&copy; 2023 Math Dragons</p>
+  </footer>
   </body>
 </html>
