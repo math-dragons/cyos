@@ -34,7 +34,7 @@ const textNodes = [
   {
     id: 1,
     text: "There is a key in front of you",
-    img: (src = "Sword1.png"),
+    img: (src = "./images/key.png"),
     options: [
       {
         text: "Pick up the key",
@@ -49,7 +49,7 @@ const textNodes = [
   {
     id: 2,
     text: "You open the door. You are now standing in a hallway.",
-    img: (src = "rWMmW1696607622.jpg"),
+    img: (src = "./images/key.png"),
     options: [
       {
         text: "Move right",
