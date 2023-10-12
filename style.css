@@ -1,0 +1,327 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Almendra:ital,wght@1,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "cinzel", sans-serif;
+}
+
+.header {
+  width: 100%;
+}
+
+nav {
+  background-image: url(./images/crack-line-grunge-pattern-background_1409-2917.jpg);
+  box-shadow: inset 0 0 0 100vmax rgba(95, 70, 90, 0.829);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+
+nav ul li {
+  display: inline-block;
+  list-style: none;
+  margin: 10px 30px;
+}
+
+nav ul li a {
+  font-weight: bold;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-size: 1.5rem;
+}
+
+.overlay-image {
+  position: relative;
+  z-index: 1;
+}
+
+body {
+  background-image: url("./images/castlebackground1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: "Arial", sans-serif;
+  color: #ffffff;
+}
+
+#landing {
+  text-align: center;
+  padding: 75px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  margin: 100px auto;
+  width: 50%;
+}
+
+#landing p {
+  padding: 15px 0;
+}
+
+#playerName {
+  width: 200px;
+  padding: 5px;
+  font-size: 16px;
+}
+
+#startButton {
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #ffcc00;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+footer {
+  background-image: url(./images/crack-line-grunge-pattern-background_1409-2917.jpg);
+  box-shadow: inset 0 0 0 100vmax rgba(95, 70, 90, 0.829);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+
+footer p {
+  text-align: center;
+  margin: 0 auto;
+}
+
+/* #gameh1 {
+  text-align: center;
+  margin-top: 3rem;
+  font-size: 2.5rem;
+} */
+
+#gameh1 {
+  text-align: center;
+  background: url(./images/dragontext.png);
+  margin: 1rem;
+  font-size: 12rem;
+  background-position: 0 0;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: #5b728a54;
+  animation: animatedOne 20s linear infinite;
+  font-family: "Almendra", serif;
+  -webkit-text-stroke: 2px rgb(116, 101, 101);
+}
+@keyframes animatedOne {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 100% 0;
+  }
+}
+
+#game-score {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  margin: 1rem auto;
+  width: 80%;
+}
+
+#game-play {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  margin: 1rem auto;
+  width: 80%;
+}
+
+#text {
+  padding: 30px;
+}
+
+button {
+  padding: 10px;
+  margin: 30px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: antiquewhite;
+}
+
+#image {
+  border-radius: 10px;
+}
+
+#board-page {
+  padding: 10px;
+  background-image: url(./images/scroll.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 10px;
+  margin: 100px auto;
+  width: 80%;
+  height: 800px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#board-page h1 {
+  margin-top: 9rem;
+  margin-bottom: 2rem;
+  font-size: 5rem;
+}
+
+#board-page div {
+  display: flex;
+  width: 50%;
+  justify-content: space-around;
+}
+
+#board-page div ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  list-style: none;
+}
+
+#about-dragons {
+  text-align: center;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  margin: 100px auto;
+  width: 80%;
+}
+
+#about-dragons p {
+  padding: 1.5rem;
+}
+
+h2 {
+  text-align: center;
+  padding: 2rem;
+}
+
+#about-grid {
+  display: grid;
+  grid-template-columns: 4fr 1fr 4fr;
+  grid-template-rows: 30rem 5rem 30rem;
+  width: 80%;
+  margin: 12rem auto;
+}
+
+#about-grid p {
+  padding: 1.5rem;
+}
+
+#about-aaron {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  grid-row: 1/2;
+  grid-column: 1/2;
+}
+
+#about-andy {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  grid-row: 1/2;
+  grid-column: 3/4;
+}
+
+#about-luke {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  grid-row: 3/4;
+  grid-column: 1/2;
+}
+
+#about-neill {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  grid-row: 3/4;
+  grid-column: 3/4;
+}
+
+#about-aaron img {
+  max-width: 200px;
+  position: relative;
+  left: 30rem;
+  bottom: 27rem;
+  cursor: pointer;
+}
+
+#about-aaron img:hover {
+  animation: spin-x 2s infinite;
+}
+
+@keyframes spin-x {
+  100% {
+    transform: rotatex(360deg);
+  }
+}
+
+#about-andy img {
+  max-width: 400px;
+  position: relative;
+  left: 22rem;
+  bottom: 38rem;
+  cursor: pointer;
+}
+
+#about-andy img:hover {
+  animation: spin 2s infinite;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#about-luke img {
+  max-width: 200px;
+  position: relative;
+  bottom: 28rem;
+  cursor: pointer;
+}
+
+#about-luke img:hover {
+  animation: spin-y 2s infinite;
+}
+
+@keyframes spin-y {
+  100% {
+    transform: rotatey(360deg);
+  }
+}
+
+#about-neill img {
+  max-width: 250px;
+  position: relative;
+  bottom: 25rem;
+  cursor: pointer;
+}
+
+#about-neill img:hover {
+  animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-50px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
