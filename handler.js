@@ -98,9 +98,11 @@ function submitHandler() {
     ",\n" +
     "  },\n" +
     " ],\n" +
-    "},\n";
+    "},\n" +
+    "\n\n\n Cut and paste to file.";
 }
 
+// Pattern
 //{
 // id: 1,
 // text: "There is a key in front of you",
