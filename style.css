@@ -240,6 +240,13 @@ button:hover {
   list-style: none;
 }
 
+img {
+  max-width: 50%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
 #about-dragons {
   text-align: center;
   padding: 10px;
@@ -275,6 +282,7 @@ h2 {
   border-radius: 10px;
   grid-row: 1/2;
   grid-column: 1/2;
+  text-align: left;
 }
 
 #about-andy {
@@ -282,6 +290,7 @@ h2 {
   border-radius: 10px;
   grid-row: 1/2;
   grid-column: 3/4;
+  text-align: left;
 }
 
 #about-luke {
@@ -289,6 +298,7 @@ h2 {
   border-radius: 10px;
   grid-row: 3/4;
   grid-column: 1/2;
+  text-align: left;
 }
 
 #indent {
@@ -300,6 +310,7 @@ h2 {
   border-radius: 10px;
   grid-row: 3/4;
   grid-column: 3/4;
+  text-align: left;
 }
 
 #about-aaron img {
@@ -308,6 +319,7 @@ h2 {
   left: 30rem;
   bottom: 34rem;
   cursor: pointer;
+  margin: 0;
 }
 
 #about-aaron img:hover {
@@ -326,6 +338,7 @@ h2 {
   left: 22rem;
   bottom: 36rem;
   cursor: pointer;
+  margin: 0;
 }
 
 #about-andy img:hover {
@@ -343,6 +356,7 @@ h2 {
   position: relative;
   bottom: 37rem;
   cursor: pointer;
+  margin: 0;
 }
 
 #about-luke img:hover {
@@ -361,6 +375,7 @@ h2 {
   bottom: 29rem;
   right: 1rem;
   cursor: pointer;
+  margin: 0;
 }
 
 #about-neill img:hover {
@@ -377,11 +392,4 @@ h2 {
   100% {
     transform: translateY(0);
   }
-}
-
-img {
-  max-width: 50%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
 }
