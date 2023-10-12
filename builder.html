@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="handler.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="form-style.css" />
+    <title>CYOA Story Entry Tool</title>
+  </head>
+  <body>
+    <header><h1>CYOA Story Builder</h1></header>
+    <main>
+      <form action="" id="cYOAForm">
+        <label for="id">Page ID (number):</label><br />
+        <input type="number" id="id" name="id" min="1" max="1000" /><br />
+
+        <label for="story">Enter story text here</label><br />
+        <textarea id="story" name="story" rows="20" cols="80"> </textarea><br />
+
+        <label for="image">Enter path to image</label>
+        <input type="text" id="image" name="image" /><br />
+
+        <br />
+
+        <label for="option1">Enter option 1 text here</label>
+        <textarea id="option1" name="option1" rows="10" cols="60"> </textarea>
+        <label for="op1">Option 1 response</label>
+        <input type="number" id="op1" name="op1" min="1" max="1000" /><br />
+
+        <label for="option2">Enter option 2 text here</label>
+        <textarea id="option2" name="option2" rows="10" cols="60"> </textarea>
+        <label for="op2">Option 2 response</label>
+        <input type="number" id="op2" name="op2" min="1" max="1000" /><br />
+
+        <label for="option3">Enter option 3 text here</label>
+        <textarea id="option3" name="option3" rows="10" cols="60"> </textarea>
+        <label for="op3">Option 3 response</label>
+        <input type="number" id="op3" name="op3" min="1" max="1000" /><br />
+
+        <label for="option4">Enter option 4 text here</label>
+        <textarea id="option4" name="option4" rows="10" cols="60"> </textarea>
+        <label for="op4">Option 4 response</label>
+        <input type="number" id="op4" name="op4" min="1" max="1000" /><br />
+
+        <label for="option5">Enter option 5 text here</label>
+        <textarea id="option5" name="option5" rows="10" cols="60"> </textarea>
+        <label for="op5">Option 5 response</label>
+        <input type="number" id="op5" name="op5" min="1" max="1000" /><br />
+        <input type="submit" value="Submit" />
+      </form>
+    </main>
+    <footer></footer>
+  </body>
+</html>
