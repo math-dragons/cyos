@@ -111,7 +111,7 @@ const textNodes = [
   {
     id: 1,
     text: "There is a key in front of you",
-    img: (src = "Sword1.png"),
+    img: (src = "./images/key1.png"),
     options: [
       {
         text: "Pick up the key",
@@ -126,7 +126,7 @@ const textNodes = [
   {
     id: 2,
     text: "You open the door. You are now standing in a hallway.",
-    img: (src = "rWMmW1696607622.jpg"),
+    img: (src = "./images/hallway1.png"),
     options: [
       {
         text: "Move right",
@@ -145,6 +145,7 @@ const textNodes = [
   {
     id: 3,
     text: "You needed that key! Journey over.",
+    img: (src = "./images/journeyover1.png"),
     options: [
       {
         text: "Restart",
@@ -155,6 +156,7 @@ const textNodes = [
   {
     id: 4,
     text: "You come to another door. The door is open, so you step through, but fall into a bottomless pit!",
+    img: (src = "./images/bottomlesspit1.png"),
     options: [
       {
         text: "Restart",
@@ -165,6 +167,7 @@ const textNodes = [
   {
     id: 5,
     text: "A bat attacks! Answer this question to block these attacks and counter",
+    img: (src = "./images/knightbats1.png"),
     options: [
       {
         text: "Questions",
@@ -175,6 +178,7 @@ const textNodes = [
   {
     id: 6,
     text: "You come to another door. The door is open, but you are attacked by a troll! Answer this question to block these attacks and counter",
+    img: (src = "./images/troll1.png"),
     options: [
       {
         text: "Questions",
@@ -185,6 +189,7 @@ const textNodes = [
   {
     id: 7,
     text: "Bat maths question: 8 x 7 = ",
+    img: (src = "./images/roman_abacus_2.gif"),
     options: [
       {
         text: "Answer 56?",
@@ -203,6 +208,7 @@ const textNodes = [
   {
     id: 8,
     text: "Correct! You evade the bat as it loops down, and catch it with a fatal glancing blow!",
+    img: (src = "./images/batattack1.png"),
     options: [
       {
         text: "Proceed down hallway",
@@ -223,6 +229,7 @@ const textNodes = [
   {
     id: 11,
     text: "Troll maths question: 4 x 4 =",
+    img: (src = "./images/roman_abacus_2.gif"),
     options: [
       {
         text: "Answer 8?",
@@ -237,6 +244,7 @@ const textNodes = [
   {
     id: 12,
     text: "Incorrect! Fatality! The last things you see are two humongous troll fist raining down on you.",
+    img: (src = "./images/trolldefeat.png"),
     options: [
       {
         text: "Restart",
@@ -247,6 +255,7 @@ const textNodes = [
   {
     id: 13,
     text: "Correct! You dodge the first blow, and slice across the troll's heel! It still has some fight left however!",
+    img: (src = "./images/troll2.png"),
     options: [
       {
         text: "More questions to survive",
@@ -257,6 +266,7 @@ const textNodes = [
   {
     id: 14,
     text: "Troll maths questions: 27 x 6 =",
+    img: (src = "./images/roman_abacus_2.gif"),
     options: [
       {
         text: "Answer 68?",
@@ -267,7 +277,7 @@ const textNodes = [
         nextText: 15,
       },
       {
-        text: "Answer 78?",
+        text: "Answer 162?",
         nextText: 16,
       },
     ],
@@ -285,6 +295,7 @@ const textNodes = [
   {
     id: 16,
     text: "Correct! The troll attempted one last attack with the last of its energy, however you deflect this with your shield and it is left at your mercy. You show no mercy.",
+    img: (src = "./images/trollslay.png"),
     options: [
       {
         text: "Proceed down hallway",
@@ -295,6 +306,7 @@ const textNodes = [
   {
     id: 10,
     text: "Victorious, but tired, you proceed down the hallway. You come to another door, the lock has been burnt off. You enter a dark, cavernous chamber, to be confronted by the dragon! Only your logic can help you in battle . . . ",
+    img: (src = "./images/dragonconfront.png"),
     options: [
       {
         text: "Questions",
@@ -305,9 +317,10 @@ const textNodes = [
   {
     id: 17,
     text: "Dragon maths question: 64 x 9 =",
+    img: (src = "./images/roman_abacus_2.gif"),
     options: [
       {
-        text: "Answer 384?",
+        text: "Answer 576?",
         nextText: 28,
       },
       {
@@ -327,6 +340,7 @@ const textNodes = [
   {
     id: 28,
     text: "Correct! The dragon underestimated the might of your shield! It withstood the first barage of flames, and in the dragons puzzlement you were able to strike the first blow! The first of many that will be needed it seems . . . ",
+    img: (src = "./images/dragonfight1.png"),
     options: [
       {
         text: "More questions to survive",
@@ -347,6 +361,7 @@ const textNodes = [
   {
     id: 18,
     text: "Dragon maths question: 87 x 7 =",
+    img: (src = "./images/roman_abacus_2.gif"),
     options: [
       {
         text: "Answer 666?",
@@ -361,7 +376,7 @@ const textNodes = [
         nextText: 19,
       },
       {
-        text: "Answer 576?",
+        text: "Answer 609?",
         nextText: 20,
       },
     ],
@@ -379,6 +394,7 @@ const textNodes = [
   {
     id: 20,
     text: "Correct! A second victorious blow from our hero! While the dragon is still somewhat dazed, you were able to get close enough to attack again. You hear the cheer of the princess, ensconced high above the battle on a balcony.",
+    img: (src = "./images/dragonblow2.png"),
     options: [
       {
         text: "More questions to survive",
@@ -389,6 +405,7 @@ const textNodes = [
   {
     id: 21,
     text: "Dragon maths question: 112 x 3 =",
+    img: (src = "./images/roman_abacus_2.gif"),
     options: [
       {
         text: "Answer 709?",
@@ -399,7 +416,7 @@ const textNodes = [
         nextText: 16,
       },
       {
-        text: "Answer 609?",
+        text: "Answer 336?",
         nextText: 22,
       },
       {
@@ -411,6 +428,7 @@ const textNodes = [
   {
     id: 22,
     text: "Correct! The dragon came steaming in, but with a lack of concentration, you were able to roll underneath and strike out at the dragons soft underbelly! A terrific hit, but the dragon is not done yet . . . ",
+    img: (src = "./images/dragonblow3.png"),
     options: [
       {
         text: "More questions to survive",
@@ -421,9 +439,10 @@ const textNodes = [
   {
     id: 23,
     text: "Dragon maths question: 108 x 16 =",
+    img: (src = "./images/roman_abacus_2.gif"),
     options: [
       {
-        text: "Answer 336?",
+        text: "Answer 1728?",
         nextText: 24,
       },
       {
@@ -443,6 +462,7 @@ const textNodes = [
   {
     id: 24,
     text: "Correct! The dragon, lashing out wildly, appeared to set the entire chamber ablaze! But you had managed to to create a refuge using your shield and an old statue. Out of the smoke, you launch a surprise attack to the back of the dragons head! It is in real pain now, but is not quite finished yet . . . ",
+    img: (src = "./images/dragonblow4.png"),
     options: [
       {
         text: "More questions to survive",
@@ -453,6 +473,7 @@ const textNodes = [
   {
     id: 25,
     text: "Dragon maths question: 97 x 6 =",
+    img: (src = "./images/roman_abacus_2.gif"),
     options: [
       {
         text: "Answer 572?",
@@ -485,6 +506,7 @@ const textNodes = [
   {
     id: 27,
     text: "Correct! Victory! The dragon rose to the sky and divebombed down, a desperate act. It was not expecting you to leap into the air to meet it however, and before it can react, your mighty blade has severed its head! A gruesome end. The princess is overjoyed with relief, and runs down the curved stairwell to meet you.",
+    img: (src = "./images/knightandprincess.png"),
     options: [
       {
         text: "You win. Restart",
@@ -499,10 +521,34 @@ startGame();
 //
 localStorage.clear();
 
-// Get a reference to the audio element
-const audioPlayer = document.getElementById("audio-player");
+// Get references to the audio element, the toggle button, and the volume control
+const audio = document.getElementById("audio-player");
+const toggleButton = document.getElementById("toggle-audio");
+const volumeControl = document.getElementById("volume-control");
 
-// Set the volume to 10%
-audioPlayer.volume = 0.1;
+// Initialize audio playing state to off
+let isAudioPlaying = false;
 
-// The audio will automatically start playing at 50% volume due to the autoplay
+// Function to toggle audio playback
+function toggleAudio() {
+  if (isAudioPlaying) {
+    audio.pause();
+  } else {
+    audio.play();
+  }
+  isAudioPlaying = !isAudioPlaying;
+  updateToggleButtonLabel();
+}
+
+// Function to update the button label based on the audio state
+function updateToggleButtonLabel() {
+  toggleButton.textContent = isAudioPlaying ? "Pause Audio" : "Play Audio";
+}
+
+// Add a click event listener to the toggle button
+toggleButton.addEventListener("click", toggleAudio);
+
+// Add an input event listener to the volume control
+volumeControl.addEventListener("input", function () {
+  audio.volume = volumeControl.value;
+});
