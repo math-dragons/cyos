@@ -67,7 +67,7 @@ if (localStorage.getItem("highScores")) {
 }
 
 function updateHighScores() {
-  const playerName = prompt("Enter your name:");
+  const playerName = playerUsername; /* prompt("Enter your name:") */
   if (playerName) {
     const playerScore = { name: playerName, correctAnswers };
 
@@ -107,10 +107,12 @@ function displayHighScores() {
   }
 }
 
+let playerUsername = localStorage.getItem("username");
+
 const textNodes = [
   {
     id: 1,
-    text: "There is a key in front of you",
+    text: `Welcome ${playerUsername}! There is a key in front of you, what would you like to do?`,
     img: (src = "./images/key1.png"),
     options: [
       {
@@ -144,7 +146,7 @@ const textNodes = [
   },
   {
     id: 3,
-    text: "You needed that key! Journey over.",
+    text: `You needed that key ${playerUsername}! Journey over.`,
     img: (src = "./images/journeyover1.png"),
     options: [
       {
@@ -155,7 +157,7 @@ const textNodes = [
   },
   {
     id: 4,
-    text: "You come to another door. The door is open, so you step through, but fall into a bottomless pit!",
+    text: "You come to another door. The door is open, so you step through, but fall into a bottomless pit! Oh how the mighty have fallen!",
     img: (src = "./images/bottomlesspit1.png"),
     options: [
       {
@@ -166,18 +168,18 @@ const textNodes = [
   },
   {
     id: 5,
-    text: "A bat attacks! Answer this question to block these attacks and counter",
+    text: "A bat attacks! Answer this question to block this attack and counter!",
     img: (src = "./images/knightbats1.png"),
     options: [
       {
-        text: "Questions",
+        text: "Question",
         nextText: 7,
       },
     ],
   },
   {
     id: 6,
-    text: "You come to another door. The door is open, but you are attacked by a troll! Answer this question to block these attacks and counter",
+    text: "You come to another door. The door is open, but you are attacked by a troll! Answer these questions to block the attacks and counter!",
     img: (src = "./images/troll1.png"),
     options: [
       {
@@ -192,15 +194,15 @@ const textNodes = [
     img: (src = "./images/roman_abacus_2.gif"),
     options: [
       {
-        text: "Answer 56?",
+        text: "Answer 56",
         nextText: 8,
       },
       {
-        text: "Answer 60?",
+        text: "Answer 60",
         nextText: 9,
       },
       {
-        text: "Answer 52?",
+        text: "Answer 52",
         nextText: 9,
       },
     ],
@@ -218,7 +220,7 @@ const textNodes = [
   },
   {
     id: 9,
-    text: "Wrong! The bat is lightning quick, and swoops in before you have time to draw your shield!",
+    text: `Wrong! The bat is lightning quick, and swoops in before you have time to draw your shield! A ghastly end for ${playerUsername}!`,
     options: [
       {
         text: "Restart",
@@ -228,15 +230,15 @@ const textNodes = [
   },
   {
     id: 11,
-    text: "Troll maths question: 4 x 4 =",
+    text: "Troll maths question one: 4 x 4 =",
     img: (src = "./images/roman_abacus_2.gif"),
     options: [
       {
-        text: "Answer 8?",
+        text: "Answer 8",
         nextText: 12,
       },
       {
-        text: "Answer 16?",
+        text: "Answer 16",
         nextText: 13,
       },
     ],
@@ -265,19 +267,19 @@ const textNodes = [
   },
   {
     id: 14,
-    text: "Troll maths questions: 27 x 6 =",
+    text: "Troll maths questions two: 27 x 6 =",
     img: (src = "./images/roman_abacus_2.gif"),
     options: [
       {
-        text: "Answer 68?",
+        text: "Answer 68",
         nextText: 15,
       },
       {
-        text: "Answer 72?",
+        text: "Answer 72",
         nextText: 15,
       },
       {
-        text: "Answer 162?",
+        text: "Answer 162",
         nextText: 16,
       },
     ],
@@ -294,7 +296,7 @@ const textNodes = [
   },
   {
     id: 16,
-    text: "Correct! The troll attempted one last attack with the last of its energy, however you deflect this with your shield and it is left at your mercy. You show no mercy.",
+    text: "Correct! The troll attempted one final attack with the last of its energy, however you deflect this with your shield and it is left at your mercy. You show no mercy.",
     img: (src = "./images/trollslay.png"),
     options: [
       {
@@ -316,23 +318,23 @@ const textNodes = [
   },
   {
     id: 17,
-    text: "Dragon maths question: 64 x 9 =",
+    text: "Dragon maths question one: 64 x 9 =",
     img: (src = "./images/roman_abacus_2.gif"),
     options: [
       {
-        text: "Answer 576?",
+        text: "Answer 576",
         nextText: 28,
       },
       {
-        text: "Answer 224?",
+        text: "Answer 224",
         nextText: 29,
       },
       {
-        text: "Answer 336?",
+        text: "Answer 336",
         nextText: 29,
       },
       {
-        text: "Answer 102?",
+        text: "Answer 102",
         nextText: 29,
       },
     ],
@@ -350,7 +352,7 @@ const textNodes = [
   },
   {
     id: 29,
-    text: "Incorrect! The dragon swallows you up whole! It was expecting more of a fight!",
+    text: `Incorrect! The dragon swallows you up whole! It was expecting more of a fight from you ${playerUsername}!`,
     options: [
       {
         text: "Restart",
@@ -360,30 +362,30 @@ const textNodes = [
   },
   {
     id: 18,
-    text: "Dragon maths question: 87 x 7 =",
+    text: "Dragon maths question two: 87 x 7 =",
     img: (src = "./images/roman_abacus_2.gif"),
     options: [
       {
-        text: "Answer 666?",
+        text: "Answer 666",
         nextText: 19,
       },
       {
-        text: "Answer 520?",
+        text: "Answer 520",
         nextText: 19,
       },
       {
-        text: "Answer 567?",
+        text: "Answer 567",
         nextText: 19,
       },
       {
-        text: "Answer 609?",
+        text: "Answer 609",
         nextText: 20,
       },
     ],
   },
   {
     id: 19,
-    text: "Incorrect! Disaster! You were too slow to act this time, the dragon connecting with a mighty blow of its tail.",
+    text: `Incorrect! Disaster! You were too slow to act this time, the dragon connecting with a mighty blow of its tail, spelling the end for ${playerUsername}`,
     options: [
       {
         text: "Restart",
@@ -393,7 +395,7 @@ const textNodes = [
   },
   {
     id: 20,
-    text: "Correct! A second victorious blow from our hero! While the dragon is still somewhat dazed, you were able to get close enough to attack again. You hear the cheer of the princess, ensconced high above the battle on a balcony.",
+    text: `Correct! A second victorious blow from our hero ${playerUsername}! While the dragon is still somewhat dazed, you were able to get close enough to attack again. You hear the cheer of the princess, ensconced high above the battle on a balcony.`,
     img: (src = "./images/dragonblow2.png"),
     options: [
       {
@@ -404,23 +406,23 @@ const textNodes = [
   },
   {
     id: 21,
-    text: "Dragon maths question: 112 x 3 =",
+    text: "Dragon maths question three: 112 x 3 =",
     img: (src = "./images/roman_abacus_2.gif"),
     options: [
       {
-        text: "Answer 709?",
+        text: "Answer 709",
         nextText: 16,
       },
       {
-        text: "Answer 610?",
+        text: "Answer 610",
         nextText: 16,
       },
       {
-        text: "Answer 336?",
+        text: "Answer 336",
         nextText: 22,
       },
       {
-        text: "Answer 740?",
+        text: "Answer 740",
         nextText: 16,
       },
     ],
@@ -438,64 +440,64 @@ const textNodes = [
   },
   {
     id: 23,
-    text: "Dragon maths question: 108 x 16 =",
+    text: "Dragon maths question four: 15 x 71 - 34 =",
     img: (src = "./images/roman_abacus_2.gif"),
     options: [
       {
-        text: "Answer 1728?",
+        text: "Answer 1031",
         nextText: 24,
       },
       {
-        text: "Answer 334?",
+        text: "Answer 439",
         nextText: 19,
       },
       {
-        text: "Answer 436?",
+        text: "Answer 2399",
         nextText: 19,
       },
       {
-        text: "Answer four 320?",
+        text: "Answer 878",
         nextText: 19,
       },
     ],
   },
   {
     id: 24,
-    text: "Correct! The dragon, lashing out wildly, appeared to set the entire chamber ablaze! But you had managed to to create a refuge using your shield and an old statue. Out of the smoke, you launch a surprise attack to the back of the dragons head! It is in real pain now, but is not quite finished yet . . . ",
+    text: "Correct! The dragon, lashing out wildly, appeared to set the entire chamber ablaze! But you had managed to create a refuge using your shield and an old statue. Out of the smoke, you launch a surprise attack to the back of the dragons head! It is in real pain now, but has a little fight left still . . . ",
     img: (src = "./images/dragonblow4.png"),
     options: [
       {
-        text: "More questions to survive",
+        text: "One more question to win",
         nextText: 25,
       },
     ],
   },
   {
     id: 25,
-    text: "Dragon maths question: 97 x 6 =",
-    img: (src = "./images/roman_abacus_2.gif"),
+    text: "Dragon maths question five: 12 x 39 ÷ 8 + 35.5 =",
+    img: (src = "./images/confusedmath.jpg"),
     options: [
       {
-        text: "Answer 572?",
+        text: "Answer 409",
         nextText: 26,
       },
       {
-        text: "Answer 592?",
+        text: "Answer 940.5",
         nextText: 26,
       },
       {
-        text: "Answer 410?",
+        text: "Answer 49.5",
         nextText: 26,
       },
       {
-        text: "Answer four 582?",
+        text: "Answer 94",
         nextText: 27,
       },
     ],
   },
   {
     id: 26,
-    text: "Incorrect! Disaster! The dragon appeared to be falling, but it was a ruse! Before it hit the floor, and with your guard down, it shot a concentrated beam of hot blue flame directly at you. The last thing you see is the look of despair in the princesses face. ",
+    text: `Incorrect! Disaster! The dragon appeared to be falling, but it was a ruse! Before it hit the floor, and with your guard down, it shot a concentrated beam of hot blue flame directly at you. The last thing you see is the look of despair in the princesses face as she calls out your name "${playerUsername}!" in anguish.`,
     options: [
       {
         text: "Restart",
@@ -509,7 +511,7 @@ const textNodes = [
     img: (src = "./images/knightandprincess.png"),
     options: [
       {
-        text: "You win. Restart",
+        text: `You win, ${playerUsername}! Restart`,
         nextText: 1,
       },
     ],
@@ -519,7 +521,8 @@ const textNodes = [
 startGame();
 
 //
-localStorage.clear();
+localStorage.removeItem("correctAnswers");
+localStorage.removeItem("incorrectAnswers");
 
 // Get references to the audio element, the toggle button, and the volume control
 const audio = document.getElementById("audio-player");
