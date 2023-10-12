@@ -30,6 +30,7 @@ myForm.addEventListener("submit", function (event) {
     });
 });
 
+// Transfer form data to variables
 function submitHandler() {
   let myId = document.getElementById("id");
   let myStory = document.getElementById("story");
@@ -43,6 +44,7 @@ function submitHandler() {
   let myOption4 = document.getElementById("option4");
   let myOp4 = document.getElementById("op4");
 
+  // Put data into expected format for object
   document.getElementById("story").value =
     "{\n" +
     "id: " +
@@ -87,20 +89,12 @@ function submitHandler() {
     myOp4.value +
     ",\n" +
     "  },\n" +
-    "  {\n" +
-    '    text: "' +
-    myOption5.value +
-    '",\n' +
-    "    nextText: " +
-    myOp5.value +
-    ",\n" +
-    "  },\n" +
     " ],\n" +
     "},\n" +
     "\n\n\n Cut and paste to file.";
 }
 
-// Pattern
+// Pattern for object
 //{
 // id: 1,
 // text: "There is a key in front of you",
