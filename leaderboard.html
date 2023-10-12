@@ -32,24 +32,27 @@
     <main>
       <section id="board-page">
         <h1>Leaderboard</h1>
-        <div>
-          <ul>
-            <li>Name:</li>
-            <li>Name:</li>
-            <li>Name:</li>
-            <li>Name:</li>
-            <li>Name:</li>
-            <li>Name:</li>
-          </ul>
-          <ul>
-            <li>Score:</li>
-            <li>Score:</li>
-            <li>Score:</li>
-            <li>Score:</li>
-            <li>Score:</li>
-            <li>Score:</li>
-          </ul>
-        </div>
+        <div id="leaderboard"></div>
+
+        <script>
+          const leaderboardElement = document.getElementById("leaderboard");
+
+          const highScoresJSON = localStorage.getItem("highScores");
+          const highScores = highScoresJSON ? JSON.parse(highScoresJSON) : [];
+          if (highScores.length > 0) {
+            // Iterate through the high scores and display each player's score
+            highScores.forEach((score, index) => {
+              leaderboardElement.innerHTML += `
+                <p>${score.name}</p>
+                <p>Correct Answers: ${score.correctAnswers}</p>
+                <p>Incorrect Answers: ${score.incorrectAnswers}</p>
+                <br>
+            `;
+            });
+          } else {
+            leaderboardElement.innerHTML = "No high scores to display.";
+          }
+        </script>
       </section>
     </main>
     <footer>
