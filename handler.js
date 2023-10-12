@@ -87,7 +87,6 @@ function submitHandler() {
     myOp4.value +
     ",\n" +
     "  },\n" +
-<<<<<<< HEAD
     "  {\n" +
     '    text: "' +
     myOption5.value +
@@ -117,7 +116,3 @@ function submitHandler() {
 //   },
 // ],
 //},
-=======
-    "  {\n";
-}
->>>>>>> 8be84f71d6655e3143842ecb12ac0578c8f9bff2
