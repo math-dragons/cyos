@@ -1,12 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
   const landingPage = document.getElementById("landing");
-  const playerNameInput = document.getElementById("playerName");
+  const playerUsernameInput = document.getElementById("playerName");
   const startButton = document.getElementById("startButton");
 
   startButton.addEventListener("click", () => {
-    const playerName = playerNameInput.value.trim();
+    const playerUsername = playerUsernameInput.value.trim();
 
-    if (playerName !== "") {
+    if (playerUsername !== "") {
       // Create the knight image and welcome message
       const knightImage = document.createElement("img");
       knightImage.src = "./images/knight2.png";
@@ -19,11 +19,13 @@ document.addEventListener("DOMContentLoaded", function () {
       knightImage.style.height = "auto"; // Maintain aspect ratio
 
       const welcomeMessage = document.createElement("p");
-      welcomeMessage.textContent = `Welcome, ${playerName}! Are you ready to brave the challenges that await you?`;
+      welcomeMessage.textContent = `Welcome, ${playerUsername}! Are you ready to brave the challenges that await you?`;
+
+      localStorage.setItem("username", playerUsername);
 
       // Create a "Yes" button
       const yesButton = document.createElement("button");
-      yesButton.textContent = "Yes";
+      yesButton.textContent = "Lets Go!";
       yesButton.addEventListener("click", () => {
         // Redirect to the 'game.html' page
         window.location.href = "game.html";
