@@ -80,9 +80,7 @@ function updateHighScores() {
 
     // Redirect to the leaderboard page and pass the results and player's name as query parameters
     displayHighScores();
-    window.location.href = `leaderboard.html?highScores=${encodeURIComponent(
-      JSON.stringify(highScores)
-    )}`;
+    window.location.href = `leaderboard.html`;
   }
 }
 
