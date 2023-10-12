@@ -91,12 +91,6 @@ footer p {
   margin: 0 auto;
 }
 
-/* #gameh1 {
-  text-align: center;
-  margin-top: 3rem;
-  font-size: 2.5rem;
-} */
-
 #gameh1 {
   text-align: center;
   background: url(./images/dragontext.png);
@@ -158,6 +152,55 @@ button:hover {
   border-radius: 10px;
 }
 
+#builderpage {
+  width: 60%;
+  margin: 0 auto;
+}
+
+#builderpage h1 {
+  text-align: center;
+  margin: 2rem;
+  font-size: 3rem;
+}
+
+#builderpage p {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+#builderpage textarea {
+  border-radius: 10px;
+}
+
+#cYOAForm {
+  padding: 50px 10px 50px 150px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  margin: 2rem 0;
+}
+
+#cYOAForm input {
+  font-size: 1rem;
+}
+
+#option1,
+#option2,
+#option3,
+#option4,
+#story {
+  font-size: 1rem;
+}
+
+#builderbtn {
+  font-size: 1rem;
+  padding: 10px;
+  cursor: pointer;
+}
+
+#builderbtn:hover {
+  background-color: antiquewhite;
+}
+
 #board-page {
   padding: 10px;
   background-image: url(./images/scroll.png);
@@ -171,6 +214,12 @@ button:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-size: 1.5rem;
+}
+
+#leaderboard {
+  overflow: auto;
+  height: 300px;
 }
 
 #board-page h1 {
@@ -180,9 +229,7 @@ button:hover {
 }
 
 #board-page div {
-  display: flex;
   width: 50%;
-  justify-content: space-around;
 }
 
 #board-page div ul {
@@ -215,11 +262,11 @@ h2 {
   grid-template-columns: 4fr 1fr 4fr;
   grid-template-rows: 30rem 5rem 30rem;
   width: 80%;
-  margin: 12rem auto;
+  margin: 14.5rem auto;
 }
 
 #about-grid p {
-  padding: 1.5rem;
+  padding: 1rem;
 }
 
 #about-aaron {
@@ -243,6 +290,10 @@ h2 {
   grid-column: 1/2;
 }
 
+#indent {
+  text-indent: 150px;
+}
+
 #about-neill {
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 10px;
@@ -254,7 +305,7 @@ h2 {
   max-width: 200px;
   position: relative;
   left: 30rem;
-  bottom: 27rem;
+  bottom: 34rem;
   cursor: pointer;
 }
 
@@ -272,7 +323,7 @@ h2 {
   max-width: 400px;
   position: relative;
   left: 22rem;
-  bottom: 38rem;
+  bottom: 36rem;
   cursor: pointer;
 }
 
@@ -289,7 +340,7 @@ h2 {
 #about-luke img {
   max-width: 200px;
   position: relative;
-  bottom: 28rem;
+  bottom: 37rem;
   cursor: pointer;
 }
 
@@ -306,7 +357,8 @@ h2 {
 #about-neill img {
   max-width: 250px;
   position: relative;
-  bottom: 25rem;
+  bottom: 29rem;
+  right: 1rem;
   cursor: pointer;
 }
 

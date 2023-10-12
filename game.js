@@ -1,7 +1,20 @@
 const textElement = document.getElementById("text");
 const optionButtonsElement = document.getElementById("option-buttons");
 
+let correctAnswers = 0;
+let incorrectAnswers = 0;
+
+if (localStorage.getItem("correctAnswers")) {
+  correctAnswers = parseInt(localStorage.getItem("correctAnswers"));
+}
+if (localStorage.getItem("incorrectAnswers")) {
+  incorrectAnswers = parseInt(localStorage.getItem("incorrectAnswers"));
+}
+
 function startGame() {
+  correctAnswers = 0;
+  incorrectAnswers = 0;
+  resultsArray.length = 0;
   showTextNode(1);
 }
 
@@ -22,19 +35,83 @@ function showTextNode(textNodeIndex) {
   });
 }
 
+const resultsArray = [];
+
 function selectOption(option) {
   const nextTextNodeId = option.nextText;
   if (nextTextNodeId <= 0) {
-    return startGame();
+    startGame(); // Reset scores at the start of the game
+    return;
   }
   showTextNode(nextTextNodeId);
+
+  const correctIds = [8, 13, 16, 28, 20, 22, 24, 27];
+  const incorrectIds = [9, 12, 15, 19, 26, 29];
+
+  if (correctIds.includes(nextTextNodeId)) {
+    correctAnswers++;
+  } else if (incorrectIds.includes(nextTextNodeId)) {
+    incorrectAnswers++;
+  }
+
+  // Push the updated values into the resultsArray
+  resultsArray.push({ correctAnswers, incorrectAnswers });
+
+  localStorage.setItem("correctAnswers", correctAnswers);
+  localStorage.setItem("incorrectAnswers", incorrectAnswers);
+}
+
+let highScores = [];
+if (localStorage.getItem("highScores")) {
+  highScores = JSON.parse(localStorage.getItem("highScores"));
+}
+
+function updateHighScores() {
+  const playerName = prompt("Enter your name:");
+  if (playerName) {
+    const playerScore = { name: playerName, correctAnswers };
+
+    highScores.push({ name: playerName, correctAnswers, incorrectAnswers });
+    highScores.sort((a, b) => b.correctAnswers - a.correctAnswers);
+    const maxHighScores = 10;
+    highScores.splice(maxHighScores);
+
+    localStorage.setItem("highScores", JSON.stringify(highScores));
+
+    // Redirect to the leaderboard page and pass the results and player's name as query parameters
+    displayHighScores();
+    window.location.href = `leaderboard.html?highScores=${encodeURIComponent(
+      JSON.stringify(highScores)
+    )}`;
+  }
+}
+
+function displayHighScores() {
+  const highScoresElement = document.createElement("ul");
+  highScoresElement.classList.add("high-scores");
+
+  highScores.forEach((score, index) => {
+    const scoreItem = document.createElement("li");
+    scoreItem.textContent = `${index + 1}. ${score.name}: ${
+      score.correctAnswers
+    } correct answers`;
+    highScoresElement.appendChild(scoreItem);
+  });
+
+  // Add or update the high scores element in your HTML
+  const existingHighScoresElement = document.querySelector(".high-scores");
+  if (existingHighScoresElement) {
+    document.body.replaceChild(highScoresElement, existingHighScoresElement);
+  } else {
+    document.body.appendChild(highScoresElement);
+  }
 }
 
 const textNodes = [
   {
     id: 1,
     text: "There is a key in front of you",
-    img: (src = "./images/key.png"),
+    img: (src = "Sword1.png"),
     options: [
       {
         text: "Pick up the key",
@@ -49,7 +126,7 @@ const textNodes = [
   {
     id: 2,
     text: "You open the door. You are now standing in a hallway.",
-    img: (src = "./images/key.png"),
+    img: (src = "rWMmW1696607622.jpg"),
     options: [
       {
         text: "Move right",
@@ -107,18 +184,18 @@ const textNodes = [
   },
   {
     id: 7,
-    text: "Bat maths question",
+    text: "Bat maths question: 8 x 7 = ",
     options: [
       {
-        text: "Answer one (correct)",
+        text: "Answer 56?",
         nextText: 8,
       },
       {
-        text: "Answer two (incorrect)",
+        text: "Answer 60?",
         nextText: 9,
       },
       {
-        text: "Answer three (incorrect)",
+        text: "Answer 52?",
         nextText: 9,
       },
     ],
@@ -145,14 +222,14 @@ const textNodes = [
   },
   {
     id: 11,
-    text: "Troll maths question",
+    text: "Troll maths question: 4 x 4 =",
     options: [
       {
-        text: "Answer one (incorrect)",
+        text: "Answer 8?",
         nextText: 12,
       },
       {
-        text: "Answer two (correct)",
+        text: "Answer 16?",
         nextText: 13,
       },
     ],
@@ -179,18 +256,18 @@ const textNodes = [
   },
   {
     id: 14,
-    text: "Troll maths questions again",
+    text: "Troll maths questions: 27 x 6 =",
     options: [
       {
-        text: "Answer one (incorrect)",
+        text: "Answer 68?",
         nextText: 15,
       },
       {
-        text: "Answer two (incorrect)",
+        text: "Answer 72?",
         nextText: 15,
       },
       {
-        text: "Answer three (correct)",
+        text: "Answer 78?",
         nextText: 16,
       },
     ],
@@ -227,22 +304,22 @@ const textNodes = [
   },
   {
     id: 17,
-    text: "Dragon maths question 1/5",
+    text: "Dragon maths question: 64 x 9 =",
     options: [
       {
-        text: "Answer one (correct)",
+        text: "Answer 384?",
         nextText: 28,
       },
       {
-        text: "Answer two (incorrect)",
+        text: "Answer 224?",
         nextText: 29,
       },
       {
-        text: "Answer three (incorrect)",
+        text: "Answer 336?",
         nextText: 29,
       },
       {
-        text: "Answer four (incorrect)",
+        text: "Answer 102?",
         nextText: 29,
       },
     ],
@@ -269,22 +346,22 @@ const textNodes = [
   },
   {
     id: 18,
-    text: "Dragon maths question 2/5",
+    text: "Dragon maths question: 87 x 7 =",
     options: [
       {
-        text: "Answer one (incorrect)",
+        text: "Answer 666?",
         nextText: 19,
       },
       {
-        text: "Answer two (incorrect)",
+        text: "Answer 520?",
         nextText: 19,
       },
       {
-        text: "Answer three (incorrect)",
+        text: "Answer 567?",
         nextText: 19,
       },
       {
-        text: "Answer four (correct)",
+        text: "Answer 576?",
         nextText: 20,
       },
     ],
@@ -311,22 +388,22 @@ const textNodes = [
   },
   {
     id: 21,
-    text: "Dragon maths question 3/5",
+    text: "Dragon maths question: 112 x 3 =",
     options: [
       {
-        text: "Answer one (incorrect)",
+        text: "Answer 709?",
         nextText: 16,
       },
       {
-        text: "Answer two (incorrect)",
+        text: "Answer 610?",
         nextText: 16,
       },
       {
-        text: "Answer three (correct)",
+        text: "Answer 609?",
         nextText: 22,
       },
       {
-        text: "Answer four (incorrect)",
+        text: "Answer 740?",
         nextText: 16,
       },
     ],
@@ -343,22 +420,22 @@ const textNodes = [
   },
   {
     id: 23,
-    text: "Dragon maths question 4/5",
+    text: "Dragon maths question: 108 x 16 =",
     options: [
       {
-        text: "Answer one (correct)",
+        text: "Answer 336?",
         nextText: 24,
       },
       {
-        text: "Answer two (incorrect)",
+        text: "Answer 334?",
         nextText: 19,
       },
       {
-        text: "Answer three (incorrect)",
+        text: "Answer 436?",
         nextText: 19,
       },
       {
-        text: "Answer four (incorrect)",
+        text: "Answer four 320?",
         nextText: 19,
       },
     ],
@@ -375,22 +452,22 @@ const textNodes = [
   },
   {
     id: 25,
-    text: "Dragon maths question 5/5",
+    text: "Dragon maths question: 97 x 6 =",
     options: [
       {
-        text: "Answer one (incorrect)",
+        text: "Answer 572?",
         nextText: 26,
       },
       {
-        text: "Answer two (incorrect)",
+        text: "Answer 592?",
         nextText: 26,
       },
       {
-        text: "Answer three (incorrect)",
+        text: "Answer 410?",
         nextText: 26,
       },
       {
-        text: "Answer four (correct)",
+        text: "Answer four 582?",
         nextText: 27,
       },
     ],
@@ -418,3 +495,14 @@ const textNodes = [
 ];
 
 startGame();
+
+//
+localStorage.clear();
+
+// Get a reference to the audio element
+const audioPlayer = document.getElementById("audio-player");
+
+// Set the volume to 10%
+audioPlayer.volume = 0.1;
+
+// The audio will automatically start playing at 50% volume due to the autoplay

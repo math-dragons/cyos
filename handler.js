@@ -42,8 +42,6 @@ function submitHandler() {
   let myOp3 = document.getElementById("op3");
   let myOption4 = document.getElementById("option4");
   let myOp4 = document.getElementById("op4");
-  let myOption5 = document.getElementById("option5");
-  let myOp5 = document.getElementById("op5");
 
   document.getElementById("story").value =
     "{\n" +
@@ -89,6 +87,7 @@ function submitHandler() {
     myOp4.value +
     ",\n" +
     "  },\n" +
+<<<<<<< HEAD
     "  {\n" +
     '    text: "' +
     myOption5.value +
@@ -118,3 +117,7 @@ function submitHandler() {
 //   },
 // ],
 //},
+=======
+    "  {\n";
+}
+>>>>>>> 8be84f71d6655e3143842ecb12ac0578c8f9bff2

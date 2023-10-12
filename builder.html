@@ -3,53 +3,80 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="./images/favicons/favicon.ico">
+    <link rel="stylesheet" href="style.css">
     <script src="handler.js" defer></script>
-    <link rel="stylesheet" type="text/css" href="form-style.css" />
-    <title>CYOA Story Entry Tool</title>
+    <title>Builder</title>
   </head>
   <body>
-    <header><h1>CYOA Story Builder</h1></header>
+    <div class="header">
+      <nav>
+	  <img src="./images/logojoined.png" 
+        width="500"
+        height="180"
+        alt="Math Dragons Logo" class="overlay-image"
+        />
+		  <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="game.html">Game</a></li>
+        <li><a href="leaderboard.html">Leaderboard</a></li>
+        <li><a href="#">Builder</a></li>
+        <li><a href="about.html">About Us</a></li>
+		</ul>
+      </nav>
+        </div>
+    </header>
     <main>
+      <section id="builderpage">
+      <h1>CYOS Builder</h1>
+      <p>Use the below builder tool to generate the code to make your very own CYOS game!</p>
       <form action="" id="cYOAForm">
         <label for="id">Page ID (number):</label><br />
-        <input type="number" id="id" name="id" min="1" max="1000" /><br />
+        <input type="number" id="id" name="id" min="1" max="1000" /><br /><br />
 
-        <label for="story">Enter story text here</label><br />
-        <textarea id="story" name="story" rows="20" cols="80"> </textarea><br />
+        <label for="story">Enter story text below</label><br />
+        <textarea id="story" name="story" rows="20" cols="80"> </textarea><br /><br />
 
         <label for="image">Enter path to image</label>
         <input type="text" id="image" name="image" /><br />
 
         <br />
 
-        <label for="option1">Enter option 1 text here</label>
-        <textarea id="option1" name="option1" rows="10" cols="60"> </textarea>
+        <label for="option1">Enter option 1 text below</label><br />
+        <textarea id="option1" name="option1" rows="10" cols="60" ></textarea>
         <label for="op1">Option 1 response</label>
         <input type="number" id="op1" name="op1" min="1" max="1000" /><br />
 
-        <label for="option2">Enter option 2 text here</label>
-        <textarea id="option2" name="option2" rows="10" cols="60"> </textarea>
+        <label for="option2">Enter option 2 text below</label><br />
+        <textarea id="option2" name="option2" rows="10" cols="60" ></textarea>
         <label for="op2">Option 2 response</label>
         <input type="number" id="op2" name="op2" min="1" max="1000" /><br />
 
-        <label for="option3">Enter option 3 text here</label>
-        <textarea id="option3" name="option3" rows="10" cols="60"> </textarea>
+        <label for="option3">Enter option 3 text below</label><br />
+        <textarea id="option3" name="option3" rows="10" cols="60" ></textarea>
         <label for="op3">Option 3 response</label>
         <input type="number" id="op3" name="op3" min="1" max="1000" /><br />
 
-        <label for="option4">Enter option 4 text here</label>
-        <textarea id="option4" name="option4" rows="10" cols="60"> </textarea>
+        <label for="option4">Enter option 4 text below</label><br />
+        <textarea id="option4" name="option4" rows="10" cols="60" ></textarea>
         <label for="op4">Option 4 response</label>
-        <input type="number" id="op4" name="op4" min="1" max="1000" /><br />
+        <input type="number" id="op4" name="op4" min="1" max="1000" /><br /><br />
 
+<<<<<<< HEAD
         <label for="option5">Enter option 5 text here</label>
         <textarea id="option5" name="option5" rows="10" cols="60"> </textarea>
         <label for="op5">Option 5 response</label>
         <input type="number" id="op5" name="op5" min="1" max="1000" /><br />
         <input type="submit" value="Submit" />
         <imput type="reset" value="reset" />
+=======
+        <input type="submit" value="Generate code!" id="builderbtn" />
+>>>>>>> 8be84f71d6655e3143842ecb12ac0578c8f9bff2
       </form>
+    </section>
     </main>
-    <footer></footer>
+    <footer>
+      <p>&copy; 2023 Math Dragons</p>
+    </footer>
   </body>
 </html>
