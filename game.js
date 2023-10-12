@@ -494,10 +494,34 @@ startGame();
 //
 localStorage.clear();
 
-// Get a reference to the audio element
-const audioPlayer = document.getElementById("audio-player");
+// Get references to the audio element, the toggle button, and the volume control
+const audio = document.getElementById("audio-player");
+const toggleButton = document.getElementById("toggle-audio");
+const volumeControl = document.getElementById("volume-control");
 
-// Set the volume to 10%
-audioPlayer.volume = 0.1;
+// Initialize audio playing state to off
+let isAudioPlaying = false;
 
-// The audio will automatically start playing at 50% volume due to the autoplay
+// Function to toggle audio playback
+function toggleAudio() {
+  if (isAudioPlaying) {
+    audio.pause();
+  } else {
+    audio.play();
+  }
+  isAudioPlaying = !isAudioPlaying;
+  updateToggleButtonLabel();
+}
+
+// Function to update the button label based on the audio state
+function updateToggleButtonLabel() {
+  toggleButton.textContent = isAudioPlaying ? "Pause Audio" : "Play Audio";
+}
+
+// Add a click event listener to the toggle button
+toggleButton.addEventListener("click", toggleAudio);
+
+// Add an input event listener to the volume control
+volumeControl.addEventListener("input", function () {
+  audio.volume = volumeControl.value;
+});
