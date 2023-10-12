@@ -42,8 +42,6 @@ function submitHandler() {
   let myOp3 = document.getElementById("op3");
   let myOption4 = document.getElementById("option4");
   let myOp4 = document.getElementById("op4");
-  let myOption5 = document.getElementById("option5");
-  let myOp5 = document.getElementById("op5");
 
   document.getElementById("story").value =
     "{\n" +
@@ -89,30 +87,5 @@ function submitHandler() {
     myOp4.value +
     ",\n" +
     "  },\n" +
-    "  {\n" +
-    '    text: "' +
-    myOption5.value +
-    '",\n' +
-    "    nextText: " +
-    myOp5.value +
-    ",\n" +
-    "  },\n" +
-    " ],\n" +
-    "},\n";
+    "  {\n";
 }
-
-//{
-// id: 1,
-// text: "There is a key in front of you",
-// img: (src = "Sword1.png"),
-// options: [
-//  {
-//    text: "Pick up the key",
-//    nextText: 2,
-//   },
-//  {
-//    text: "Ignore the key",
-//     nextText: 3,
-//   },
-// ],
-//},

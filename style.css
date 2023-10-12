@@ -91,12 +91,6 @@ footer p {
   margin: 0 auto;
 }
 
-/* #gameh1 {
-  text-align: center;
-  margin-top: 3rem;
-  font-size: 2.5rem;
-} */
-
 #gameh1 {
   text-align: center;
   background: url(./images/dragontext.png);
@@ -156,6 +150,55 @@ button:hover {
 
 #image {
   border-radius: 10px;
+}
+
+#builderpage {
+  width: 60%;
+  margin: 0 auto;
+}
+
+#builderpage h1 {
+  text-align: center;
+  margin: 2rem;
+  font-size: 3rem;
+}
+
+#builderpage p {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+#builderpage textarea {
+  border-radius: 10px;
+}
+
+#cYOAForm {
+  padding: 50px 10px 50px 150px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  margin: 2rem 0;
+}
+
+#cYOAForm input {
+  font-size: 1rem;
+}
+
+#option1,
+#option2,
+#option3,
+#option4,
+#story {
+  font-size: 1rem;
+}
+
+#builderbtn {
+  font-size: 1rem;
+  padding: 10px;
+  cursor: pointer;
+}
+
+#builderbtn:hover {
+  background-color: antiquewhite;
 }
 
 #board-page {
