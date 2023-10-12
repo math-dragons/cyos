@@ -68,17 +68,22 @@ if (localStorage.getItem("highScores")) {
 
 function updateHighScores() {
   const playerName = prompt("Enter your name:");
+  if (playerName) {
+    const playerScore = { name: playerName, correctAnswers };
 
-  const playerScore = { name: playerName, correctAnswers };
+    highScores.push({ name: playerName, correctAnswers, incorrectAnswers });
+    highScores.sort((a, b) => b.correctAnswers - a.correctAnswers);
+    const maxHighScores = 10;
+    highScores.splice(maxHighScores);
 
-  highScores.push(playerScore);
-  highScores.sort((a, b) => b.correctAnswers - a.correctAnswers);
-  const maxHighScores = 10;
-  highScores.splice(maxHighScores);
+    localStorage.setItem("highScores", JSON.stringify(highScores));
 
-  localStorage.setItem("highScores", JSON.stringify(highScores));
-
-  displayHighScores();
+    // Redirect to the leaderboard page and pass the results and player's name as query parameters
+    displayHighScores();
+    window.location.href = `leaderboard.html?highScores=${encodeURIComponent(
+      JSON.stringify(highScores)
+    )}`;
+  }
 }
 
 function displayHighScores() {
