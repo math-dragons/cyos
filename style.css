@@ -326,3 +326,10 @@ h2 {
     transform: translateY(0);
   }
 }
+
+img {
+  max-width: 50%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
