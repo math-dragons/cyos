@@ -203,6 +203,10 @@ button:hover {
   background-color: antiquewhite;
 }
 
+#brhidden {
+  display: none;
+}
+
 #board-page {
   padding: 10px;
   background-image: url(./images/scroll.png);
@@ -392,5 +396,39 @@ h2 {
   }
   100% {
     transform: translateY(0);
+  }
+}
+
+@media only screen and (max-width: 1366px) {
+  nav ul li a {
+    font-size: 1.2rem;
+  }
+  #about-grid p {
+    font-size: 0.9rem;
+  }
+  #about-andy img {
+    width: 300px;
+    left: 15rem;
+    bottom: 33rem;
+  }
+  #about-aaron img {
+    max-width: 150px;
+    left: 20rem;
+    bottom: 34rem;
+  }
+  #about-luke img {
+    max-width: 150px;
+    bottom: 34rem;
+  }
+  #about-neill img {
+    max-width: 200px;
+    bottom: 28rem;
+    right: 2rem;
+  }
+  #cYOAForm {
+    padding: 50px 10px 50px 100px;
+  }
+  #brhidden {
+    display: block;
   }
 }
