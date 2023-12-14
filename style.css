@@ -47,6 +47,17 @@ body {
   font-family: "Arial", sans-serif;
   color: #ffffff;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+body > .header {
+  flex-shrink: 0;
+}
+
+body > .footer {
+  margin-top: auto;
 }
 
 #landing {
